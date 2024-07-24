@@ -65,3 +65,31 @@ h6 {
 #__next {
   isolation: isolate;
 }
+
+.container {
+  max-width: 120rem;
+  margin: 8rem auto;
+  background-color: var(--color-grey-light-1);
+  box-shadow: 0 2rem 6rem rgba(0, 0, 0, 0.3);
+  min-height: 50rem;
+}
+
+.content {
+  display: flex;
+}
+
+.header {
+  height: 7rem;
+  background-color: #fff;
+  border-bottom: var(--color-grey-light-1);
+}
+
+.hotel-view {
+  background-color: #fff;
+  flex: 1;
+}
+
+aside {
+  background-color: var(--color-grey-dark-1);
+  flex: 0 0 18%;
+}
