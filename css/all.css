@@ -36,14 +36,6 @@ html {
   font-size: 62.5%;
 }
 
-img,
-picture,
-video,
-canvas,
-svg {
-  display: block;
-}
-
 input,
 button,
 textarea,
@@ -82,20 +74,111 @@ h6 {
   height: 7rem;
   background-color: #fff;
   border-bottom: var(--color-grey-light-1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.4rem;
 }
 
 .logo {
   height: 3.25rem;
+  margin-left: 3rem;
 }
 
+.search {
+  flex: 0 0 40%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.search__input {
+  font-family: inherit;
+  font-size: inherit;
+  background-color: var(--color-grey-light-2);
+  border: none;
+  padding: 0.8rem 2rem;
+  border-radius: 100px;
+  width: 90%;
+  transition: all 0.2s;
+}
+.search__input:focus {
+  outline: none;
+  width: 100%;
+  background-color: var(--color-grey-light-2);
+}
+.search__input::-webkit-input-placeholder {
+  font-weight: 200;
+}
+.search__button {
+  border: none;
+  margin-left: -3.9rem;
+  background-color: var(--color-grey-light-2);
+}
+.search__button:focus {
+  outline: none;
+}
+.search__button:active {
+  transform: translateY(3px);
+}
 .search__icon {
   height: 2rem;
   width: 2rem;
+  fill: var(--color-grey-dark-3);
 }
 
+.user-nav {
+  display: flex;
+  align-self: stretch;
+  align-items: center;
+  gap: 1.2rem;
+}
+.user-nav > * {
+  padding: 0 2rem;
+  cursor: pointer;
+  height: 100%;
+}
+.user-nav > *:hover {
+  background-color: var(--color-grey-light-2);
+}
+.user-nav__icon-box {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+.user-nav__icon-box span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 .user-nav__icon {
   height: 2.25rem;
   width: 2.25rem;
+  fill: var(--color-grey-dark-2);
+}
+.user-nav__notification {
+  position: absolute;
+  text-align: center;
+  font-size: 0.9rem;
+  height: 1.9rem;
+  width: 1.9rem;
+  background-color: var(--color-primary);
+  color: #fff;
+  border-radius: 50%;
+}
+.user-nav__notification--bookmark {
+  top: 1.3rem;
+  right: 1.2rem;
+}
+.user-nav__notification--message {
+  top: 1.2rem;
+  right: 1rem;
+}
+.user-nav__user {
+  display: flex;
+  align-items: center;
+}
+.user-nav__user-name {
+  margin-right: 2rem;
 }
 .user-nav__user-photo {
   height: 3.75rem;
