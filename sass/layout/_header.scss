@@ -41,7 +41,7 @@
   }
   &__button {
     border: none;
-    margin-left: -3.9rem;
+    margin-left: -4.4rem;
     background-color: var(--color-grey-light-2);
     &:focus {
       outline: none;
@@ -110,9 +110,11 @@
   &__user {
     display: flex;
     align-items: center;
+    gap: 0.7em;
   }
   &__user-name {
     margin-right: 2rem;
+    font-size: 1.7rem;
   }
 
   &__user-photo {
