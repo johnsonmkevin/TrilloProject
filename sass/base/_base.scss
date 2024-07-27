@@ -20,6 +20,7 @@
 }
 * {
   margin: 0;
+  padding: 0;
 }
 body {
   line-height: 1.6;
@@ -54,6 +55,20 @@ h4,
 h5,
 h6 {
   overflow-wrap: break-word;
+}
+
+a {
+  text-decoration: none;
+}
+
+button {
+  border: none;
+  cursor: pointer;
+}
+
+ul,
+li {
+  list-style: none;
 }
 
 //The CSS rule you provided targets all paragraph (p) and heading (h1 to h6) elements in the HTML document. The overflow-wrap: break-word; property-value pair tells the browser to insert a line break between any two words that would otherwise overflow their containing box. This ensures that long words or URLs won't overflow their container.

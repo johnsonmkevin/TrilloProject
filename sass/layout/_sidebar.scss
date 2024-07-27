@@ -2,3 +2,19 @@ aside {
   background-color: var(--color-grey-dark-1);
   flex: 0 0 18%;
 }
+
+.side-nav {
+  &__item {
+  }
+  &__link {
+  }
+  &__link {
+  }
+}
+
+.legal {
+  font-size: 1.2rem;
+  text-align: center;
+  padding: 2.5rem;
+  color: var(--color-grey-dark-3);
+}

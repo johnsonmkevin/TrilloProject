@@ -19,6 +19,7 @@
 
 * {
   margin: 0;
+  padding: 0;
 }
 
 body {
@@ -51,6 +52,20 @@ h4,
 h5,
 h6 {
   overflow-wrap: break-word;
+}
+
+a {
+  text-decoration: none;
+}
+
+button {
+  border: none;
+  cursor: pointer;
+}
+
+ul,
+li {
+  list-style: none;
 }
 
 #root,
@@ -195,4 +210,11 @@ h6 {
 aside {
   background-color: var(--color-grey-dark-1);
   flex: 0 0 18%;
+}
+
+.legal {
+  font-size: 1.2rem;
+  text-align: center;
+  padding: 2.5rem;
+  color: var(--color-grey-dark-3);
 }
