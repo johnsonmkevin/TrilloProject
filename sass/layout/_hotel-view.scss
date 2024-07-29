@@ -3,4 +3,32 @@
   flex: 1;
   background-color: aquamarine;
   height: 80rem; //test
+
+  &__container {
+    display: flex;
+  }
+  &__img {
+    max-width: 33.333333%;
+  }
+}
+
+.hotel-info {
+  display: flex;
+  padding: 2.2rem 1.8rem;
+  align-items: center;
+  &__name {
+    text-transform: uppercase;
+    font-size: 2rem;
+    margin-right: 2rem;
+  }
+  &__icon {
+    height: 1.6rem;
+    width: 1.6rem;
+  }
+  &__rating {
+    margin-left: auto;
+  }
+}
+
+.hotel-info__location {
 }
