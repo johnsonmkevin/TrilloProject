@@ -25,8 +25,13 @@
 body {
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
-  background-image: linear-gradient(to right bottom, var(--color-primary-light), var(--color-primary-dark));
-  background-size: cover;
+  /* background-image: linear-gradient(
+    to right bottom,
+    var(--color-primary-light),
+    var(--color-primary-dark)
+  );
+  background-size: cover; */
+  background-color: #f2a2e4;
   font-family: "Open-sans", sans-serif;
   font-weight: 400;
   min-height: 100vh;
@@ -56,6 +61,7 @@ h6 {
 
 a {
   text-decoration: none;
+  list-style: none;
 }
 
 button {
@@ -205,6 +211,14 @@ li {
 .hotel-view {
   background-color: #fff;
   flex: 1;
+  background-color: aquamarine;
+  height: 80rem;
+}
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }
 
 aside {
@@ -212,9 +226,48 @@ aside {
   flex: 0 0 18%;
 }
 
+.side-nav {
+  font-size: 1.4rem;
+  margin-top: 3.5rem;
+}
+.side-nav__item {
+  position: relative;
+}
+.side-nav__item:not(:last-child) {
+  margin-bottom: 0.5rem;
+}
+.side-nav__item::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 3px;
+  background-color: var(--color-primary);
+  transform: scaleY(0);
+  transition: transform 0.2s, width 0.4s cubic-bezier(1, 0, 0, 1) 0.2s;
+}
+.side-nav__item:hover::before, .side-nav__item--active::before {
+  transform: scaleY(1);
+  width: 100%;
+}
+.side-nav__link:link, .side-nav__link:visited {
+  color: var(--color-grey-light-1);
+  text-transform: uppercase;
+  display: inline-block;
+  padding: 1.5rem 3rem;
+  display: flex;
+  align-items: center;
+  position: relative;
+  z-index: 20;
+}
+.side-nav__icon {
+  margin-right: 2rem;
+}
+
 .legal {
   font-size: 1.2rem;
   text-align: center;
   padding: 2.5rem;
-  color: var(--color-grey-dark-3);
+  margin-top: auto;
 }

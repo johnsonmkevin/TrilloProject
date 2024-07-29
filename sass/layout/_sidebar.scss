@@ -1,14 +1,54 @@
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
 aside {
   background-color: var(--color-grey-dark-1);
   flex: 0 0 18%;
 }
 
 .side-nav {
+  font-size: 1.4rem;
+  margin-top: 3.5rem;
+
   &__item {
+    position: relative;
+    &:not(:last-child) {
+      margin-bottom: 0.5rem;
+    }
   }
-  &__link {
+  &__item::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 3px;
+    background-color: var(--color-primary);
+    transform: scaleY(0);
+    transition: transform 0.2s, width 0.4s cubic-bezier(1, 0, 0, 1) 0.2s;
   }
-  &__link {
+
+  &__item:hover::before,
+  &__item--active::before {
+    transform: scaleY(1);
+    width: 100%;
+  }
+  &__link:link,
+  &__link:visited {
+    color: var(--color-grey-light-1);
+    text-transform: uppercase;
+    display: inline-block;
+    padding: 1.5rem 3rem;
+    display: flex;
+    align-items: center;
+    position: relative;
+    z-index: 20;
+  }
+  &__icon {
+    margin-right: 2rem;
   }
 }
 
@@ -16,5 +56,5 @@ aside {
   font-size: 1.2rem;
   text-align: center;
   padding: 2.5rem;
-  color: var(--color-grey-dark-3);
+  margin-top: auto;
 }
