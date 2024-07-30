@@ -1,34 +1,70 @@
 .hotel-view {
   background-color: #fff;
   flex: 1;
-  background-color: aquamarine;
-  height: 80rem; //test
+  height: 80rem;
+}
 
-  &__container {
-    display: flex;
-  }
-  &__img {
-    max-width: 33.333333%;
+.gallery {
+  display: flex;
+  &__photo {
+    width: 100%;
+    display: block;
   }
 }
 
-.hotel-info {
+.overview {
   display: flex;
-  padding: 2.2rem 1.8rem;
   align-items: center;
-  &__name {
+  border-bottom: 1px solid var(--color-grey-light-2);
+
+  &__heading {
+    font-size: 2.25rem;
+    font-weight: 300;
     text-transform: uppercase;
-    font-size: 2rem;
-    margin-right: 2rem;
-  }
-  &__icon {
-    height: 1.6rem;
-    width: 1.6rem;
+    letter-spacing: 1px;
+    padding: 1.5rem 3rem;
   }
   &__rating {
+    background-color: var(--color-primary);
+    margin-left: 3rem;
+    color: #fff;
+    padding: 0 2rem;
+    display: flex;
+    flex-direction: column;
+    align-self: stretch;
+    justify-content: center;
+    align-items: center;
+  }
+  &__icon {
+    margin-right: 0.5rem;
+  }
+  &__location {
     margin-left: auto;
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+    font-weight: 600;
+  }
+  &__rating-count {
+    font-size: 0.9rem;
+    text-transform: uppercase;
+  }
+  &__rating-average {
+    font-size: 2.25rem;
+    font-weight: 300;
+  }
+  &__stars {
+    display: flex;
   }
 }
 
-.hotel-info__location {
+.btn-inline {
+  border: none;
+  color: var(--color-primary);
+  font-size: inherit;
+  border-bottom: 1px solid currentColor;
+  padding-bottom: 2px;
+  background-color: transparent;
+  display: inline-block;
+  cursor: pointer;
 }
